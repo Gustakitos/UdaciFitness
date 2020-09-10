@@ -1,16 +1,22 @@
-import * as React from "react";
-import { View, Text } from "react-native";
+/* eslint-disable no-use-before-define */
+import * as React from 'react';
+import { StyleSheet, View } from 'react-native';
+import AddEntry from './components/AddEntry';
 
 export default function App() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Universal React with Expo</Text>
+    <View style={styles.container}>
+      <AddEntry />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginLeft: 10,
+    marginRight: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
